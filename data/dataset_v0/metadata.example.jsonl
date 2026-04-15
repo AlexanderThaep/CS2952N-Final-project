@@ -1,0 +1,2 @@
+{"sample_id":"demo_0001","source_path":"videos/demo_0001.mp4","modality":"video","camera_intrinsics":[[1000.0,0.0,512.0],[0.0,1000.0,288.0],[0.0,0.0,1.0]],"camera_extrinsics":[[1.0,0.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.0,1.0,5.0],[0.0,0.0,0.0,1.0]],"split":"train"}
+{"sample_id":"demo_0002","source_path":"graphs/demo_0002.npz","modality":"graph","camera_intrinsics":null,"camera_extrinsics":null,"split":"val"}
