@@ -1,4 +1,9 @@
-torch
-numpy
+accelerate==0.33.0
+diffusers==0.28.0
+numpy==1.24.4
+tqdm==4.66.2
+transformers==4.40.1
+einops==0.7.0
+decord==0.6.0
+sentencepiece==0.1.99
 PyYAML
-tqdm
