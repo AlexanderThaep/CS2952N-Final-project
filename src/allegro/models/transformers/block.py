@@ -40,8 +40,8 @@ from diffusers.utils import USE_PEFT_BACKEND,  deprecate, is_xformers_available
 from diffusers.utils.torch_utils import maybe_allow_in_graph
 from torch import nn
 
-from scripts.allegro.models.transformers.rope import RoPE3D, PositionGetter3D
-from scripts.allegro.models.transformers.embedding import CombinedTimestepSizeEmbeddings
+from src.allegro.models.transformers.rope import RoPE3D, PositionGetter3D
+from src.allegro.models.transformers.embedding import CombinedTimestepSizeEmbeddings
 
 if is_xformers_available():
     import xformers

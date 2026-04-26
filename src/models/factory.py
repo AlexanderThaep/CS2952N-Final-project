@@ -4,7 +4,6 @@ from src.models.allegro_extractor import AllegroExtractor
 from src.models.base import LatentExtractor
 from src.models.videocrafter_extractor import VideoCrafterExtractor
 
-
 def build_extractor(model_name: str, checkpoint_path: str | None = None, device: str = "cpu") -> LatentExtractor:
     model_name = model_name.lower()
     if model_name == "videocrafter":

@@ -21,8 +21,8 @@ from diffusers.configuration_utils import ConfigMixin, register_to_config
 from diffusers.models.modeling_utils import ModelMixin
 from diffusers.models.embeddings import PixArtAlphaTextProjection
 
-from scripts.allegro.models.transformers.block import to_2tuple, BasicTransformerBlock, AdaLayerNormSingle
-from scripts.allegro.models.transformers.embedding import PatchEmbed2D, PatchEmbed2DTI2V
+from src.allegro.models.transformers.block import to_2tuple, BasicTransformerBlock, AdaLayerNormSingle
+from src.allegro.models.transformers.embedding import PatchEmbed2D, PatchEmbed2DTI2V
 
 logger = logging.get_logger(__name__)
 

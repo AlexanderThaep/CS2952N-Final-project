@@ -12,7 +12,7 @@ from diffusers.models.modeling_outputs import AutoencoderKLOutput
 from diffusers.models.autoencoders.vae import DecoderOutput, DiagonalGaussianDistribution
 from diffusers.models.attention_processor import SpatialNorm
 
-from scripts.allegro.models.vae.modules import DownEncoderBlock3D, UNetMidBlock3DConv, UpDecoderBlock3D
+from src.allegro.models.vae.modules import DownEncoderBlock3D, UNetMidBlock3DConv, UpDecoderBlock3D
 
 
 class Encoder3D(nn.Module):

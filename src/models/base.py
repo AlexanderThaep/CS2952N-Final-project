@@ -8,7 +8,6 @@ from typing import Any
 
 import torch
 
-
 @dataclass
 class LayerLatentOutput:
     layer_name: str
@@ -17,13 +16,11 @@ class LayerLatentOutput:
     global_pooled: torch.Tensor  # [D]
     metadata: dict[str, Any]
 
-
 @dataclass
 class LatentBatchOutput:
     sample_id: str
     model_name: str
     layers: list[LayerLatentOutput]
-
 
 class LatentExtractor(ABC):
     """Adapter interface for extracting standardized latent representations."""

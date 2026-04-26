@@ -5,7 +5,7 @@ from einops import rearrange
 import torch
 import os
 import argparse
-from allegro.models.vae.vae_allegro import AllegroAutoencoderKL3D
+from src.allegro.models.vae.vae_allegro import AllegroAutoencoderKL3D
 
 from decord import VideoReader
 

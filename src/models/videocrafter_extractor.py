@@ -9,7 +9,6 @@ import torch
 from src.models.base import LatentExtractor, LayerLatentOutput
 from src.utils.pooling import compute_default_pooling
 
-
 class VideoCrafterExtractor(LatentExtractor):
     def __init__(self, checkpoint_path: str | None = None, device: str = "cpu") -> None:
         super().__init__(model_name="videocrafter", checkpoint_path=checkpoint_path)

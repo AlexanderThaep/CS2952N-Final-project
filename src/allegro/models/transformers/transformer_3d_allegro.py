@@ -22,8 +22,8 @@ from einops import rearrange
 from torch import nn
 from diffusers.models.embeddings import PixArtAlphaTextProjection
 
-from scripts.allegro.models.transformers.block import to_2tuple, BasicTransformerBlock, AdaLayerNormSingle
-from scripts.allegro.models.transformers.embedding import PatchEmbed2D
+from src.allegro.models.transformers.block import to_2tuple, BasicTransformerBlock, AdaLayerNormSingle
+from src.allegro.models.transformers.embedding import PatchEmbed2D
 
 from diffusers.utils import logging
 
