@@ -19,7 +19,6 @@ from src.datasets import DatasetV0
 from src.models import build_extractor
 from src.utils import save_latent_batch
 
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run latent extraction forward pass.")
     parser.add_argument("--config", type=str, required=True, help="Path to YAML config.")
@@ -27,11 +26,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output_root", type=str, required=True, help="Path for saved latents.")
     return parser.parse_args()
 
-
 def load_config(path: str | Path) -> dict:
     with Path(path).open("r", encoding="utf-8") as handle:
         return yaml.safe_load(handle)
-
 
 def main() -> None:
     args = parse_args()
@@ -50,7 +47,7 @@ def main() -> None:
     extractor = build_extractor(
         model_name=model_cfg["name"],
         checkpoint_path=model_cfg.get("checkpoint_path"),
-        device=runtime_cfg.get("device", "cpu"),
+        device=runtime_cfg.get("device", "cuda"),
     )
     layer_specs = model_cfg.get("layer_specs", [])
 
@@ -59,7 +56,6 @@ def main() -> None:
         save_latent_batch(output, args.output_root)
 
     print(f"Saved latent outputs to: {Path(args.output_root).resolve()}")
-
 
 if __name__ == "__main__":
     main()

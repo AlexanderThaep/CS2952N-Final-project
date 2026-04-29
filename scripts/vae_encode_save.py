@@ -26,6 +26,7 @@ def vae_inference(args):
     frames = frames[:,:,:88]
 
     frames = frames.cuda().to(torch.float32)
+
     with torch.no_grad():
         posterior = vae.encode(
             frames,
@@ -45,8 +46,8 @@ def vae_inference(args):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--vae", type=str, default='')
-    parser.add_argument("--input_video", type=str, default="./resources/demo_video.mp4")
+    parser.add_argument("--vae", type=str, default='./models/allegro/vae')
+    parser.add_argument("--input_video", type=str, default="./resources/render_traj_color.mp4")
     parser.add_argument("--save_path", type=str, default="./allegro_latents")
     parser.add_argument("--local_batch_size", type=int, default=2)
 

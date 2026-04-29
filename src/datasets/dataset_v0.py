@@ -7,7 +7,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-
 @dataclass
 class DatasetSample:
     sample_id: str
@@ -17,7 +16,6 @@ class DatasetSample:
     camera_extrinsics: list[list[float]] | None
     split: str
     raw: dict[str, Any]
-
 
 class DatasetV0:
     def __init__(self, root: str | Path, metadata_file: str, split: str | None = None) -> None:

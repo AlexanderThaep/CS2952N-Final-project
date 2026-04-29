@@ -12,6 +12,11 @@ def save_latent_batch(output: LatentBatchOutput, output_root: str | Path) -> Non
     target_dir.mkdir(parents=True, exist_ok=True)
 
     for layer in output.layers:
+        print(layer.shape)
+
+    pass
+
+    for layer in output.layers:
         payload = {
             "tokens": layer.tokens.cpu(),
             "pooled": layer.pooled.cpu(),
