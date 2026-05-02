@@ -4,4 +4,6 @@
 
 **NOTE**: dataset should live at `CS2952N-Final-project/data`
 
-2. 
+2. run `src/datasets/dataset_loader.py`
+- split_by_percentage
+- split_sklearn
