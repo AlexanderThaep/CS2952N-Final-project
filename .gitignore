@@ -4,5 +4,7 @@ models/allegro/
 resources
 output_videos
 allegro_latents
+*.DS_Store
 
 data/
+.venv/
