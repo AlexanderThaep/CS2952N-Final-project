@@ -192,8 +192,35 @@ def split_sklearn(
 
 
 # ---------------------------------------------------------------------------
-# Convenience: print a summary of a split
+# Helper functions
 # ---------------------------------------------------------------------------
+
+def save_train_test(split: Split, out_path: str | Path) -> None:
+    """Save a train/test split to a JSONL file.
+
+    Each line is a JSON object with fields:
+        split, scene, traj_id, motion_type, video_path, cameras_path
+
+    Args:
+        split:    The split dict returned by :func:`split_by_percentage` or
+                  :func:`split_sklearn`.
+        out_path: Destination file path. Parent directories are created automatically.
+    """
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with out_path.open("w", encoding="utf-8") as fh:
+        for split_name in ("train", "test"):
+            for rec in split.get(split_name, []):
+                fh.write(json.dumps({
+                    "split": split_name,
+                    "scene": rec.scene,
+                    "traj_id": rec.traj_id,
+                    "motion_type": rec.motion_type,
+                    "video_path": str(rec.video_path),
+                    "cameras_path": str(rec.cameras_path),
+                }) + "\n")
+
 
 def summarize_split(split: Split) -> None:
     """Print per-scene, per-motion-type counts for each split."""
@@ -207,3 +234,19 @@ def summarize_split(split: Split) -> None:
             counts[key] = counts.get(key, 0) + 1
         for (scene, mt), cnt in sorted(counts.items()):
             print(f"  {scene:20s}  {mt:20s}  {cnt}")
+
+
+if __name__ == "__main__":
+    """"
+    # EXAMPLE TO RUN THE DATASET LOADER
+    # Usage: python -m src.datasets.dataset_loader
+    """
+
+    DATA_ROOT = "data"
+    OUT = "splits/split.jsol"
+
+    # split = split_by_percentage(DATA_ROOT, test_size=0.2)
+    split = split_sklearn(DATA_ROOT, test_size=0.2, random_state=42)
+    summarize_split(split)
+    save_train_test(split, OUT)
+    print(f"\nSaved to {OUT}")

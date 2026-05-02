@@ -1,0 +1,11 @@
+{"split": "train", "scene": "bicycle", "traj_id": "traj_00008", "motion_type": "orbit", "video_path": "data/bicycle/traj_00008/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00008/cameras.json"}
+{"split": "train", "scene": "bicycle", "traj_id": "traj_00002", "motion_type": "orbit", "video_path": "data/bicycle/traj_00002/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00002/cameras.json"}
+{"split": "train", "scene": "bicycle", "traj_id": "traj_00003", "motion_type": "orbit", "video_path": "data/bicycle/traj_00003/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00003/cameras.json"}
+{"split": "train", "scene": "bicycle", "traj_id": "traj_00001", "motion_type": "orbit", "video_path": "data/bicycle/traj_00001/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00001/cameras.json"}
+{"split": "train", "scene": "bicycle", "traj_id": "traj_00009", "motion_type": "orbit", "video_path": "data/bicycle/traj_00009/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00009/cameras.json"}
+{"split": "train", "scene": "bonsai", "traj_id": "traj_00002", "motion_type": "orbit", "video_path": "data/bonsai/traj_00002/render_traj_color.mp4", "cameras_path": "data/bonsai/traj_00002/cameras.json"}
+{"split": "train", "scene": "bicycle", "traj_id": "traj_00006", "motion_type": "orbit", "video_path": "data/bicycle/traj_00006/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00006/cameras.json"}
+{"split": "train", "scene": "bicycle", "traj_id": "traj_00005", "motion_type": "orbit", "video_path": "data/bicycle/traj_00005/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00005/cameras.json"}
+{"split": "test", "scene": "bonsai", "traj_id": "traj_00001", "motion_type": "orbit", "video_path": "data/bonsai/traj_00001/render_traj_color.mp4", "cameras_path": "data/bonsai/traj_00001/cameras.json"}
+{"split": "test", "scene": "bicycle", "traj_id": "traj_00007", "motion_type": "orbit", "video_path": "data/bicycle/traj_00007/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00007/cameras.json"}
+{"split": "test", "scene": "bicycle", "traj_id": "traj_00004", "motion_type": "orbit", "video_path": "data/bicycle/traj_00004/render_traj_color.mp4", "cameras_path": "data/bicycle/traj_00004/cameras.json"}
