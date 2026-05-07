@@ -8,3 +8,4 @@ Running in conda using torch and xformers for CU130
 2. run `src/datasets/dataset_loader.py`
 - split_by_percentage
 - split_sklearn
+Running in conda using torch and xformers for CU130 
