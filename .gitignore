@@ -6,3 +6,10 @@ data/
 processed_data/
 latents/
 output_videos/
+resources
+output_videos
+allegro_latents
+*.DS_Store
+
+data/
+.venv/
