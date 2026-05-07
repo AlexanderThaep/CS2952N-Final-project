@@ -33,7 +33,7 @@ def vae_decode(args):
             .contiguous()
         )
 
-    video_name = os.path.splitext(os.path.basename(args.input_video))[0]
+    video_name = "video"
 
     imageio.mimwrite(
         f"{args.save_path}/{video_name}.mp4",

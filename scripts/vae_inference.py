@@ -37,10 +37,10 @@ def vae_inference(args):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--vae", type=str, default='')
-    parser.add_argument("--input_video", type=str, default="resources/demo_video.mp4")
+    parser.add_argument("--vae", type=str, default='models/allegro/vae')
+    parser.add_argument("--input_video", type=str, default="processed_data_c/bicycle/traj_00004/render_traj_color.mp4")
     parser.add_argument("--save_path", type=str, default="output_videos")
-    parser.add_argument("--local_batch_size", type=int, default=2)
+    parser.add_argument("--local_batch_size", type=int, default=1)
 
     args = parser.parse_args()
     if not os.path.exists(args.save_path):

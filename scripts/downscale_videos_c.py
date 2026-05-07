@@ -10,12 +10,12 @@ import sys
 INPUT_ROOT = Path("data")
 OUTPUT_ROOT = Path("processed_data_c")
 
-TARGET_HEIGHT = 240
+TARGET_HEIGHT = 480
 
 VIDEO_EXTS = {".mp4", ".mov", ".avi", ".mkv", ".webm"}
 
 # Number of parallel ffmpeg processes
-MAX_WORKERS = 2
+MAX_WORKERS = 8
 
 OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
 
@@ -38,7 +38,7 @@ def process_video(input_file: Path):
             .output(
                 str(output_file),
 
-                vf=f"fps=15,scale=-2:{TARGET_HEIGHT}",
+                vf=f"fps=4,scale=-2:{TARGET_HEIGHT}",
 
                 vcodec="h264_nvenc",
                 preset="p4",

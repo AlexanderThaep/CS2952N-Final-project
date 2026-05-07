@@ -27,7 +27,7 @@ def vae_inference(args):
     # frames = frames * 2.0 - 1.0
     # frames = rearrange(frames, 'f h w c -> 1 c f h w')
 
-    frames = vr.get_batch(range(88)).asnumpy()
+    frames = vr.get_batch(range(int(args.frames))).asnumpy()
 
     frames = torch.from_numpy(frames)
     frames = frames.permute(3, 0, 1, 2).unsqueeze(0)
@@ -67,6 +67,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--vae", type=str, default='models/allegro/vae')
+    parser.add_argument("--frames", type=str, default=88)
     parser.add_argument("--input_video", type=str, default="data/room/traj_00001/render_traj_color.mp4")
     parser.add_argument("--save_path", type=str, default="latents")
     parser.add_argument("--local_batch_size", type=int, default=1)

@@ -3,7 +3,7 @@
 from pathlib import Path
 import shutil
 
-LATENTS_ROOT = Path("latents")
+LATENTS_ROOT = Path("latents_b")
 PROCESSED_ROOT = Path("data")
 
 for latent_file in LATENTS_ROOT.rglob("render_traj_color_latents.pt"):

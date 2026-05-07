@@ -19,3 +19,5 @@ allegro_latents
 data/
 .venv/
 output_videos/
+
+tmp/
