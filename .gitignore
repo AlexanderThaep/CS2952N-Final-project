@@ -10,6 +10,7 @@ resources
 output_videos
 allegro_latents
 *.DS_Store
+*.zip
 
 data/
 .venv/
