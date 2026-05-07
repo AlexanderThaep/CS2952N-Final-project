@@ -3,11 +3,15 @@ __pycache__/
 *.lnk
 models/allegro/
 data/
+
+processed_data_b/
+latents_b/
+
 processed_data/
 latents/
+
 output_videos/
 resources
-output_videos
 allegro_latents
 *.DS_Store
 *.zip

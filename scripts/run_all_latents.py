@@ -1,8 +1,8 @@
 from pathlib import Path
 import subprocess
 
-INPUT_ROOT = Path("processed_data")
-OUTPUT_ROOT = Path("latents")
+INPUT_ROOT = Path("processed_data_b")
+OUTPUT_ROOT = Path("latents_b")
 
 for video_path in INPUT_ROOT.rglob("*.mp4"):
 
