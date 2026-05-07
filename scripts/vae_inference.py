@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from einops import rearrange
 import torch
 import imageio
@@ -32,16 +34,13 @@ def vae_inference(args):
 
     imageio.mimwrite(f"{args.save_path}/test_vae.mp4", out_video[0], fps=15, quality=8)  # highest quality is 10, lowest is 0
 
-
-
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--vae", type=str, default='')
     parser.add_argument("--input_video", type=str, default="resources/demo_video.mp4")
-    parser.add_argument("--save_path", type=str, default="./output_videos")
+    parser.add_argument("--save_path", type=str, default="output_videos")
     parser.add_argument("--local_batch_size", type=int, default=2)
-
 
     args = parser.parse_args()
     if not os.path.exists(args.save_path):

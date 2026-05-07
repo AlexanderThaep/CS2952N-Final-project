@@ -1,6 +1,8 @@
 __pycache__/
 *.py[cod]
+*.lnk
 models/allegro/
-resources
-output_videos
-allegro_latents
+data/
+processed_data/
+latents/
+output_videos/

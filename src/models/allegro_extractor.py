@@ -7,7 +7,6 @@ from typing import Any
 import torch
 
 from src.models.base import LatentExtractor, LayerLatentOutput
-from src.utils.pooling import compute_default_pooling
 
 from src.allegro.models.vae.vae_allegro import AllegroAutoencoderKL3D
 

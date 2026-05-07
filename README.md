@@ -1,0 +1,1 @@
+Running in conda using torch and xformers for CU130 

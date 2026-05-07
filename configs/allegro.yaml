@@ -1,7 +1,6 @@
 runtime:
   device: cuda
   batch_size: 2
-  num_workers: 0
 
 model:
   name: allegro
@@ -10,7 +9,3 @@ model:
     - down_blocks.0
     - mid_block
     - conv_out
-
-output:
-  save_tokens: true
-  save_pooled: true
