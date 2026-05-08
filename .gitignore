@@ -4,11 +4,8 @@ __pycache__/
 models/allegro/
 data/
 
-processed_data_b/
-latents_b/
-
-processed_data/
-latents/
+processed_data*/
+latents*/
 
 output_videos/
 resources
